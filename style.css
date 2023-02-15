@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Lateef');
+
+body {
+	font-family: Lateef, Arial;
+	font-size: 18px;
+	line-height: 1.25;
+	
+	background-color: #f9f0de;
+	color: #1f2839;
+
+	margin: 0 0 0 25%;
+}
+
+section.oranges{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 25%;
+	height: 100%;
+
+	background-image: url("oranges-sidebar.jpg");
+	transform: scaleX(-1);
+	background-size: cover;
+	background-position: 60% 50%;
+}
+
+main{
+	padding: 80px;
+	max-width: 960px;
+	margin: 0 auto 0 auto;
+}
+
+h1 {
+	font-size: 96px;
+	line-height: 1;
+	border-bottom: 1px solid #1f2839;
+	text-transform: uppercase;
+}
+
+section.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 60px 0px;
+
+	grid-gap: 64px 32px;
+}
+
+div.title{
+	display: flex;
+	justify-content: space-between;
+	font-size: 24px;
+	margin: 24px 0 24px 0;
+}
+
+footer{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+/* drink formatting */
+section.drinks{
+	padding-bottom: 80px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 30px 0px;
+
+	grid-gap: 16px 32px;
+}
+
+.section-title {
+	font-size: 49px;
+	width: 100%;
+	border-bottom: 1px solid #1f2839;
+}
+
+.drink-item{
+	display: flex;
+	justify-content: space-between;
+	font-size: 24px;
+}
+
+.drink-description{
+	font-size: 18px;
+}
+
+/* responsive styling */
+@media (max-width: 1000px){
+	section.oranges{
+		background-image: none;
+		width: 0%;
+	}
+
+	main{
+		position: absolute;
+		top: 0;
+		left:0;
+		min-width: 100vw;	
+	}	
+}
+
+@media (max-width: 750px){
+
+	section.grid, section.drinks{
+		grid-template-columns: 1fr;
+		margin: 15px 0px;
+	}
+
+	main{
+		padding: 40px;
+	}
+
+	h1{
+		font-size: 64px;
+		line-height: 1;
+
+		text-align: left;
+	}
+
+
+}
